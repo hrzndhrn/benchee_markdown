@@ -1,0 +1,16 @@
+language: elixir
+
+elixir:
+  - 1.7.4
+  - 1.8.1
+
+otp_release:
+  - 21.2
+
+env:
+  global:
+    - MIX_ENV=test
+
+script:
+  - mix do deps.get, deps.compile, coveralls.travis
+  - mix credo --strict
