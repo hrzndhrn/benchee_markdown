@@ -9,6 +9,9 @@ defmodule BencheeMarkdown.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
+      description: """
+      Markdown formatter for the (micro) benchmarking library benchee.
+      """,
 
       # Coveralls
       test_coverage: [tool: ExCoveralls],
