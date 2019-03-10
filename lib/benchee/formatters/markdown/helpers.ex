@@ -1,10 +1,10 @@
 defmodule Benchee.Formatter.Markdown.Helpers do
   @moduledoc false
 
-  alias Benchee.Formatters.Console.Helpers
   alias Benchee.Conversion
   alias Benchee.Conversion.Duration
   alias Benchee.Conversion.Memory
+  alias Benchee.Formatters.Console.Helpers
 
   defdelegate count_output(count, unit), to: Helpers
 

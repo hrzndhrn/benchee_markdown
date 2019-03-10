@@ -4,7 +4,7 @@ defmodule Benchee.Formatters.Markdown do
 
   ## Examples
 
-			list = Enum.to_list(1..10_000)
+      list = Enum.to_list(1..10_000)
 
       map_fun = fn(i) -> [i, i * i] end
 
@@ -22,15 +22,14 @@ defmodule Benchee.Formatters.Markdown do
 
   @behaviour Benchee.Formatter
 
-  alias Benchee.Suite
   alias Benchee.Formatter.Markdown.Templates
+  alias Benchee.Suite
 
   @doc """
   Formats the output of benchee to markdown page.
   """
   @spec format(Suite.t(), term) :: String.t()
   def format(suite, %{file: _} = opts) do
-    IO.inspect(opts)
     Templates.start_link(opts)
     Templates.render(:main, suite: suite)
   end
