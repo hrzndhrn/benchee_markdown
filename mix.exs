@@ -30,7 +30,7 @@ defmodule BencheeMarkdown.MixProject do
   defp deps do
     [
       {:benchee, "~> 0.14"},
-      {:credo, "~> 1.0", only: :dev},
+      {:credo, "~> 1.0", only: [:dev, :test]},
       {:dialyxir, "~> 1.0.0-rc.4", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.14", only: :dev},
       {:excoveralls, "~> 0.10", only: :test}
