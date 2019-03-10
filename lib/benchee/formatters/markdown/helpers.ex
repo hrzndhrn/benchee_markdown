@@ -20,8 +20,6 @@ defmodule Benchee.Formatter.Markdown.Helpers do
   def memory_output(memory, unit),
     do: Memory.format({Memory.scale(memory, unit), unit})
 
-  def units(suite), do: units(suite.scenarios, suite)
-
   def units(scenarios, suite),
     do: Conversion.units(scenarios, suite.configuration.unit_scaling)
 
