@@ -7,7 +7,17 @@ defmodule BencheeMarkdown.MixProject do
       version: "0.1.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package(),
+
+      # Coveralls
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ]
     ]
   end
 
@@ -23,7 +33,18 @@ defmodule BencheeMarkdown.MixProject do
       {:credo, "~> 1.0", only: :dev},
       {:dialyxir, "~> 1.0.0-rc.4", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.14", only: :dev},
-      {:excoveralls, "~> 0.8", only: :test}
+      {:excoveralls, "~> 0.10", only: :test}
+    ]
+  end
+
+  defp package do
+    [
+      files: ["priv", "lib", "mix.exs", "README.md"],
+      maintainers: ["Marcus Kruse"],
+      licenses: ["MIT"],
+      links: %{
+        "github" => "https://github.com/hrzndhrn/benchee_markdown"
+      }
     ]
   end
 end
