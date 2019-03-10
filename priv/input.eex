@@ -1,0 +1,19 @@
+<%
+  import Benchee.Formatter.Markdown.Templates
+  import Benchee.Formatter.Markdown.Helpers
+%>
+<%= if is_binary(input) do %>
+__Input: <%= input %>__
+
+<% end %>
+Run Time
+<%= render(:scenarios, [suite: suite, input: input]) %>
+<%= if comparsion?(suite) do %>
+Comparsion
+<%= render(:comparsions, [suite: suite, input: input]) %>
+<% end %>
+<%= if memory_usage?(suite) do %>
+Memory Usage
+<%= render(:memory_usages, [suite: suite, input: input]) %>
+<% end %>
+<hr/>

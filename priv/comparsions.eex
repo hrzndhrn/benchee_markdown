@@ -1,0 +1,40 @@
+<%
+  import Benchee.Formatter.Markdown.Helpers
+  import Benchee.Formatter.Markdown.Templates
+
+  alias Benchee.Benchmark.Scenario
+  alias Benchee.Statistics
+
+  scenarios = scenarios(suite, input)
+  units = units(scenarios, suite)
+  [reference | scenarios] = scenarios
+
+  %Scenario{
+    name: name,
+    run_time_statistics: %Statistics{
+      ips: ips
+    }
+  } = reference
+
+%>
+<table style="width: 1%">
+  <tr>
+    <th>Name</th>
+    <th style="text-align: right">IPS</th>
+    <th style="text-align: right">Slower</th>
+  <tr>
+    <td style="white-space: nowrap"><%= name %></td>
+    <td style="white-space: nowrap;text-align: right"><%= count_output(ips, units.ips) %></td>
+    <td>&nbsp;</td>
+  </tr>
+<%=
+  Enum.map(
+    scenarios,
+    fn scenario ->
+      render(
+        :comparsion,
+        [reference: reference, scenario: scenario, units: units]
+      )
+    end)
+%>
+</table>

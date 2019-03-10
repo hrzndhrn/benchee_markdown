@@ -1,0 +1,45 @@
+<%
+  import Benchee.Formatter.Markdown.Helpers
+  import Benchee.Formatter.Markdown.Templates
+
+  alias Benchee.Benchmark.Scenario
+  alias Benchee.Statistics
+
+  scenarios = scenarios(suite, input)
+  units = units(scenarios, suite)
+  [reference | scenarios] = scenarios
+
+  %Scenario{
+    name: name,
+    memory_usage_statistics: %Statistics{
+      average: average
+    }
+  } = reference
+%>
+<table style="width: 1%">
+  <tr>
+    <th>Name</th>
+    <th style="text-align: right">Memory</th>
+    <%= if comparsion?(suite) do %>
+      <th style="text-align: right">Factor</th>
+    <% end %>
+  </tr>
+  <tr>
+    <td style="white-space: nowrap"><%= name %></td>
+    <td style="white-space: nowrap"><%= memory_output(average, units.memory) %></td>
+    <%= if comparsion?(suite) do %>
+      <td>&nbsp;</td>
+    <% end %>
+  </tr>
+  <%=
+    Enum.map(
+      scenarios,
+      fn scenario ->
+        render(
+          :memory_usage,
+          [reference: reference, scenario: scenario, units: units]
+        )
+      end
+    )
+%>
+</table>

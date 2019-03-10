@@ -1,0 +1,17 @@
+<%
+  alias Benchee.Conversion.Duration
+
+  configuration = suite.configuration
+%>
+<table style="width: 1%">
+  <tr>
+    <th style="width: 1%">:time</th>
+    <td style="white-space: nowrap"><%= Duration.format(configuration.time) %></td>
+  </tr><tr>
+    <th>:parallel</th>
+    <td style="white-space: nowrap"><%= configuration.parallel %></td>
+  </tr><tr>
+    <th>:warmup</th>
+    <td style="white-space: nowrap"><%= Duration.format(configuration.warmup) %></td>
+  </tr>
+</table>

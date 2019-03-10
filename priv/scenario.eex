@@ -1,0 +1,25 @@
+<%
+  import Benchee.Formatter.Markdown.Helpers
+
+  alias Benchee.Benchmark.Scenario
+  alias Benchee.Statistics
+
+  %Scenario{
+    name: name,
+    run_time_statistics: %Statistics{
+      average: average,
+      ips: ips,
+      std_dev_ratio: std_dev_ratio,
+      median: median,
+      percentiles: %{99 => percentile_99}
+    }
+  } = scenario
+%>
+  <tr>
+    <td style="white-space: nowrap"><%= name %></td>
+    <td style="white-space: nowrap; text-align: right"><%= count_output(ips, units.ips) %></td>
+    <td style="white-space: nowrap; text-align: right"><%= duration_output(average, units.run_time) %></td>
+    <td style="white-space: nowrap; text-align: right"><%= deviation_output(std_dev_ratio) %></td>
+    <td style="white-space: nowrap; text-align: right"><%= duration_output(median, units.run_time) %></td>
+    <td style="white-space: nowrap; text-align: right"><%= duration_output(percentile_99, units.run_time) %></td>
+  </tr>

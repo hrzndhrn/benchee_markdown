@@ -1,0 +1,24 @@
+<%
+  import Benchee.Formatter.Markdown.Helpers
+  import Benchee.Formatter.Markdown.Templates
+
+  scenarios = scenarios(suite, input)
+  units = units(scenarios, suite)
+%>
+<table style="width: 1%">
+  <tr>
+    <th>Name</th>
+    <th style="text-align: right">IPS</th>
+    <th style="text-align: right">Average</th>
+    <th style="text-align: right">Devitation</th>
+    <th style="text-align: right">Median</th>
+    <th style="text-align: right">99th&nbsp;%</th>
+  </tr>
+<%=
+  Enum.map(
+    scenarios,
+    fn scenario ->
+      render(:scenario, [scenario: scenario, units: units])
+    end)
+%>
+</table>

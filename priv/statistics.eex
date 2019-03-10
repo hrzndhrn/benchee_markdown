@@ -1,0 +1,14 @@
+<%
+  import Benchee.Formatter.Markdown.Helpers
+  import Benchee.Formatter.Markdown.Templates
+%>
+<%= if inputs?(suite) do %>
+<%=
+  Enum.map(
+    inputs(suite),
+    fn input -> render(:input, [suite: suite, input: input]) end
+  )
+%>
+<% else %>
+<%= render(:input, [suite: suite, input: false]) %>
+<% end %>

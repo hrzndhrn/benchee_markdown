@@ -1,0 +1,22 @@
+<% system = suite.system %>
+<table style="width: 1%">
+  <tr>
+    <th style="width: 1%; white-space: nowrap">Operating System</th>
+    <td><%= Atom.to_string(system.os) %></td>
+  </tr><tr>
+    <th style="white-space: nowrap">CPU Information</th>
+    <td style="white-space: nowrap"><%= system.cpu_speed %></td>
+  </tr><tr>
+    <th style="white-space: nowrap">Number of Available Cores</th>
+    <td style="white-space: nowrap"><%= system.num_cores %></td>
+  </tr><tr>
+    <th style="white-space: nowrap">Available Memory</th>
+    <td style="white-space: nowrap"><%= system.available_memory %></td>
+  </tr><tr>
+    <th style="white-space: nowrap">Elixir Version</th>
+    <td style="white-space: nowrap"><%= system.elixir %></td>
+  </tr><tr>
+    <th style="white-space: nowrap">Erlang Version</th>
+    <td style="white-space: nowrap"><%= system.erlang %></td>
+  </tr>
+</table>
