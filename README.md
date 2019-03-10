@@ -42,4 +42,4 @@ you don't care about the console output you can just delet that line.
 
 ## Examples
 
-An example can been seen at [examples/bench/basic].
+An example can been seen at [examples/bench/basic](examples/bench/basic).
