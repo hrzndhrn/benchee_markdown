@@ -37,8 +37,8 @@ Benchee.run(
   ]
 ```
 
-The sample defines both the standard console formatter and the CSV formatter, if
-you don't care about the console output you can just delet that line.
+The sample defines both the standard console formatter and the markdown formatter, if
+you don't care about the console output you can just delete that line.
 
 ## Examples
 
