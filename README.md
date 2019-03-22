@@ -3,11 +3,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/hrzndhrn/benchee_markdown/badge.svg?branch=master)](https://coveralls.io/github/hrzndhrn/benchee_markdown?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Benche formatter to output markdown. A very early beta version.
+[Benchee](https://github.com/bencheeorg/benchee) formatter to output markdown. A very early beta version.
 
 ## Installation
 
-Add benchee_csv to your list of dependencies in `mix.exs`:
+Add benchee_markdown to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
