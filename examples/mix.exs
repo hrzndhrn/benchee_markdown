@@ -20,7 +20,6 @@ defmodule Examples.MixProject do
 
   defp deps do
     [
-      {:benchee, "~> 0.14"},
       {:benchee_markdown, path: ".."}
     ]
   end
