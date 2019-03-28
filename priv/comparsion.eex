@@ -7,11 +7,14 @@
   %Scenario{
     name: name,
     run_time_data: %{
-      statistics: %Statistics{ ips: ips }
+      statistics: %Statistics{
+        ips: ips,
+        relative_more: more_run_time
+      }
     }
   } = scenario
 
-  slower = Float.round(reference.run_time_data.statistics.ips / ips, 2)
+  slower = Float.round(more_run_time, 2)
 %>
   <tr>
     <td style="white-space: nowrap"><%= name %></td>

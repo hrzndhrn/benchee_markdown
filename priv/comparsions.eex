@@ -33,7 +33,7 @@
     fn scenario ->
       render(
         :comparsion,
-        [reference: reference, scenario: scenario, units: units]
+        [scenario: scenario, units: units]
       )
     end)
 %>

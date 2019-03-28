@@ -39,7 +39,7 @@
       fn scenario ->
         render(
           :memory_usage,
-          [reference: reference, scenario: scenario, units: units]
+          [scenario: scenario, units: units]
         )
       end
     )
