@@ -2,7 +2,7 @@
   import Benchee.Formatter.Markdown.Helpers
   import Benchee.Formatter.Markdown.Templates
 
-  alias Benchee.Benchmark.Scenario
+  alias Benchee.Scenario
   alias Benchee.Statistics
 
   scenarios = scenarios(suite, input)
@@ -11,8 +11,8 @@
 
   %Scenario{
     name: name,
-    run_time_statistics: %Statistics{
-      ips: ips
+    run_time_data: %{
+      statistics: %Statistics{ ips: ips }
     }
   } = reference
 

@@ -1,17 +1,17 @@
 <%
   import Benchee.Formatter.Markdown.Helpers
 
-  alias Benchee.Benchmark.Scenario
+  alias Benchee.Scenario
   alias Benchee.Statistics
 
   %Scenario{
     name: name,
-    run_time_statistics: %Statistics{
-      ips: ips
+    run_time_data: %{
+      statistics: %Statistics{ ips: ips }
     }
   } = scenario
 
-  slower = Float.round(reference.run_time_statistics.ips / ips, 2)
+  slower = Float.round(reference.run_time_data.statistics.ips / ips, 2)
 %>
   <tr>
     <td style="white-space: nowrap"><%= name %></td>
