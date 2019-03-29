@@ -1,17 +1,19 @@
 <%
   import Benchee.Formatter.Markdown.Helpers
 
-  alias Benchee.Benchmark.Scenario
+  alias Benchee.Scenario
   alias Benchee.Statistics
 
   %Scenario{
     name: name,
-    run_time_statistics: %Statistics{
-      average: average,
-      ips: ips,
-      std_dev_ratio: std_dev_ratio,
-      median: median,
-      percentiles: %{99 => percentile_99}
+    run_time_data: %{
+      statistics: %Statistics{
+        average: average,
+        ips: ips,
+        std_dev_ratio: std_dev_ratio,
+        median: median,
+        percentiles: %{99 => percentile_99}
+      }
     }
   } = scenario
 %>

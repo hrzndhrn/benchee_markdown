@@ -1,17 +1,20 @@
 <%
   import Benchee.Formatter.Markdown.Helpers
 
-  alias Benchee.Benchmark.Scenario
+  alias Benchee.Scenario
   alias Benchee.Statistics
 
   %Scenario{
     name: name,
-    memory_usage_statistics: %Statistics{
-      average: average
+    memory_usage_data: %{
+      statistics: %Statistics{
+        average: average,
+        relative_more: more_memory
+      }
     }
   } = scenario
 
-  factor = Float.round(average / reference.memory_usage_statistics.average, 2)
+  factor = Float.round(more_memory, 2)
 %>
   <tr>
     <td style="white-space: nowrap"><%= name %></td>
