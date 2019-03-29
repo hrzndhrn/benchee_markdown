@@ -3,8 +3,6 @@ defmodule Benchee.Formatter.Markdown.Templates do
 
   use Agent
 
-  alias EEx
-
   @templates ~w(
     comparsion
     comparsions
