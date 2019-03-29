@@ -12,6 +12,9 @@ defmodule BencheeMarkdown.MixProject do
       description: """
       Markdown formatter for the (micro) benchmarking library benchee.
       """,
+      dialyzer: [
+        plt_add_apps: [:eex]
+      ],
 
       # Coveralls
       test_coverage: [tool: ExCoveralls],
