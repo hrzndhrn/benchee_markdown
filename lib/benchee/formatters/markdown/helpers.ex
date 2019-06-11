@@ -13,7 +13,7 @@ defmodule Benchee.Formatter.Markdown.Helpers do
   def duration_output(duration, unit),
     do: Duration.format({Duration.scale(duration, unit), unit})
 
-  def comparsion?(suite), do: length(suite.scenarios) > 1
+  def comparison?(suite), do: length(suite.scenarios) > 1
 
   def memory_usage?(suite), do: suite.configuration.memory_time > 0
 
