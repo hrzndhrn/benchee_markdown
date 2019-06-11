@@ -4,8 +4,8 @@ defmodule Benchee.Formatter.Markdown.Templates do
   use Agent
 
   @templates ~w(
-    comparsion
-    comparsions
+    comparison
+    comparisons
     configuration
     input
     main

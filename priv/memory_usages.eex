@@ -22,14 +22,14 @@
   <tr>
     <th>Name</th>
     <th style="text-align: right">Memory</th>
-    <%= if comparsion?(suite) do %>
+    <%= if comparison?(suite) do %>
       <th style="text-align: right">Factor</th>
     <% end %>
   </tr>
   <tr>
     <td style="white-space: nowrap"><%= name %></td>
     <td style="white-space: nowrap"><%= memory_output(average, units.memory) %></td>
-    <%= if comparsion?(suite) do %>
+    <%= if comparison?(suite) do %>
       <td>&nbsp;</td>
     <% end %>
   </tr>

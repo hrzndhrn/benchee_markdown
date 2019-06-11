@@ -32,7 +32,7 @@
     scenarios,
     fn scenario ->
       render(
-        :comparsion,
+        :comparison,
         [scenario: scenario, units: units]
       )
     end)

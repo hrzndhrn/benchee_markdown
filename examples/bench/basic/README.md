@@ -79,7 +79,7 @@ Run Time
   </tr>
 </table>
 
-Comparsion
+Comparison
 <table style="width: 1%">
   <tr>
     <th>Name</th>
@@ -148,7 +148,7 @@ Run Time
   </tr>
 </table>
 
-Comparsion
+Comparison
 <table style="width: 1%">
   <tr>
     <th>Name</th>
