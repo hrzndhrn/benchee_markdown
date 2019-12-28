@@ -2,7 +2,7 @@
   import Benchee.Formatter.Markdown.Helpers
   import Benchee.Formatter.Markdown.Templates
 %>
-# Benchmark
+# <%= suite.configuration.title || "Benchmark" %>
 
 Benchmark run from <%= DateTime.utc_now() |> DateTime.to_string() %> UTC
 
