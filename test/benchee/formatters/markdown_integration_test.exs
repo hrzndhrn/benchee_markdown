@@ -18,6 +18,7 @@ defmodule Benchee.Formatters.MarkdownIntegrationTest do
         memory_time: 0.01,
         warmup: 0.02,
         print: [fast_warning: false],
+        title: "My Benchmark",
         formatters: [
           {Benchee.Formatters.Markdown, file: @file_path},
           Benchee.Formatters.Console
