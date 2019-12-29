@@ -1,25 +1,33 @@
 language: elixir
+
 elixir:
   - 1.6.6
   - 1.7.4
-  - 1.8.0
+  - 1.8.2
+  - 1.9.2
+
 otp_release:
   - 20.3
-  - 21.2
+  - 21.3
+  - 22.1
+
 before_script:
+  - mix do deps.get, deps.compile
   - MIX_ENV=test mix compile --warnings-as-errors
   - travis_wait mix dialyzer --plt
+
 script:
+  - if [[ "$TRAVIS_ELIXIR_VERSION" == "1.9"* ]]; then mix format --check-formatted ;fi
   - mix credo --strict
-  - mix format --check-formatted
-  - mix dialyzer --halt-exit-status
   - mix test
-after_script:
-  - mix deps.get --only docs
-  - MIX_ENV=docs mix inch.report
+  - mix dialyzer --halt-exit-status
+
 sudo: required
+
 dist: trusty
+
 cache:
   directories:
-    - _build
     - deps
+    - test/support/plts
+
