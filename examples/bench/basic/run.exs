@@ -12,6 +12,7 @@ Benchee.run(
       list |> Enum.map(map_fun) |> List.flatten()
     end
   },
+  title: "Benchmark Example",
   inputs: inputs,
   time: 0.01,
   memory_time: 0.01,
