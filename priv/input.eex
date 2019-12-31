@@ -3,6 +3,7 @@
   import Benchee.Formatter.Markdown.Helpers
 %>
 <%= if is_binary(input) do %>
+
 __Input: <%= input %>__
 
 <% end %>
