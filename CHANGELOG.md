@@ -1,3 +1,7 @@
+## 0.2.3 - 2019-12-31
+
+Fix input formatting. Thanks to @sgilson.
+
 ## 0.2.2 - 2019-12-29
 
 Report title will match suite title, if present. Thanks to @sgilson.
