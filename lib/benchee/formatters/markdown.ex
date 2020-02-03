@@ -23,7 +23,6 @@ defmodule Benchee.Formatters.Markdown do
   @behaviour Benchee.Formatter
 
   alias Benchee.Formatter.Markdown.Templates
-  alias Benchee.Suite
 
   @doc """
   Formats the output of benchee to markdown page.
