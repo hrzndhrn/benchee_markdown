@@ -28,7 +28,7 @@ defmodule Benchee.Formatters.Markdown do
   @doc """
   Formats the output of benchee to markdown page.
   """
-  @spec format(Suite.t(), term) :: String.t()
+  @impl true
   def format(suite, %{file: _} = opts) do
     Templates.start_link(opts)
     Templates.render(:main, suite: suite)
@@ -46,7 +46,7 @@ defmodule Benchee.Formatters.Markdown do
   Uses the return value of `Benchee.Formatters.Markdown.format/2` to write it
   to the file defined in the initial configuration.
   """
-  @spec write(String.t(), map) :: :ok
+  @impl true
   def write(data, %{file: file}) do
     File.write!(file, data)
   end
