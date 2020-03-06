@@ -1,4 +1,5 @@
 # BencheeMarkdown
+[![Hex.pm](https://img.shields.io/hexpm/v/xema.svg)](https://hex.pm/packages/benchee_markdown)
 [![Build Status](https://travis-ci.org/hrzndhrn/benchee_markdown.svg?branch=master)](https://travis-ci.org/hrzndhrn/benchee_markdown)
 [![Coverage Status](https://coveralls.io/repos/github/hrzndhrn/benchee_markdown/badge.svg?branch=master)](https://coveralls.io/github/hrzndhrn/benchee_markdown?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -11,7 +12,7 @@ Add benchee_markdown to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:benchee_markdown, "~> 0.1", only: :dev}]
+  [{:benchee_markdown, "~> 0.2", only: :dev}]
 end
 ```
 
