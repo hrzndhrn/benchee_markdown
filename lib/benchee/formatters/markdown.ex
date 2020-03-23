@@ -37,7 +37,7 @@ defmodule Benchee.Formatters.Markdown do
     raise """
     You need to specify a file to write the markdown in.
 
-    formatters: [{Benchee.Formatters.Markdown, file: "my.json"}]
+    formatters: [{Benchee.Formatters.Markdown, file: "my.md"}]
     """
   end
 
