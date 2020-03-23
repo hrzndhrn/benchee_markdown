@@ -15,7 +15,7 @@ defmodule Benchee.Formatters.Markdown do
         },
         formatters: [
           Benchee.Formatters.Console,
-          {Benchee.Formatters.HTML, file: "samples_output/flat_map.html"}
+          {Benchee.Formatters.Markdown, file: "samples_output/flat_map.html"}
         ]
       )
   """
