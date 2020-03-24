@@ -20,7 +20,7 @@ defmodule Benchee.Formatter.Markdown.Templates do
   def start_link(opts),
     do:
       Agent.start_link(
-        fn -> opts |> Map.get(:templates) |> defaults() end,
+        fn -> opts |> Map.get(:templates) |> defaults() |> IO.inspect end,
         name: __MODULE__
       )
 
@@ -28,6 +28,7 @@ defmodule Benchee.Formatter.Markdown.Templates do
     do:
       name
       |> template()
+      |> IO.inspect(label: :temp)
       |> EEx.eval_file(bindings, Keyword.put_new(opts, :trim, true))
 
   defp template(name),

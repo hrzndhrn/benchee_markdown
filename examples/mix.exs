@@ -25,6 +25,9 @@ defmodule Examples.MixProject do
   end
 
   defp aliases do
-    ["bench.basic": "run bench/basic/run.exs"]
+    [
+      "bench.basic": "run bench/basic/run.exs",
+      "bench.template": "run bench/template/run.exs"
+    ]
   end
 end
