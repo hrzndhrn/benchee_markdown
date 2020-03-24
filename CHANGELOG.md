@@ -2,6 +2,8 @@
 
 ## 0.2.4 - 2020-03-24
 
+Add `:description` to the config.
+
 First approach for custom templates. An example was added under
 `examples/bench/template`, runnable under `examples` with `mix bench.example`.
 Documentation will follow if the feature was completed.

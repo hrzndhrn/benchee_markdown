@@ -4,7 +4,11 @@
 %>
 # <%= suite.configuration.title || "Benchmark" %>
 
+<%= if description != nil do %>
+<%= description %>
+<% else %>
 Benchmark run from <%= DateTime.utc_now() |> DateTime.to_string() %> UTC
+<% end %>
 
 ## System
 

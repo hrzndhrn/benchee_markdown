@@ -33,14 +33,32 @@ Benchee.run(
     "map.flatten" => fn -> list |> Enum.map(map_fun) |> List.flatten() end
   },
   formatters: [
-    {Benchee.Formatters.Markdown, file: "my.md"},
-    Benchee.Formatters.Console
+    Benchee.Formatters.Console,
+    {Benchee.Formatters.Markdown,
+      file: "my.md"
+      description: """
+      This benchmark compares `foobar` with the libs `foo` and `bar`.
+      """
+    }
   ]
 ```
 
-The sample defines both the standard console formatter and the markdown formatter, if
-you don't care about the console output you can just delete that line.
+The sample defines both the standard console formatter and the markdown
+formatter, if you don't care about the console output you can just delete that
+line.
+
+The `:description` is optional. Without a `:description` the text "Benchmark run
+from 2020-03-24 14:03:11.471713Z UTC" with the actual data time will be
+inserted.
 
 ## Examples
 
-An example can been seen at [examples/bench/basic](examples/bench/basic).
+Examples can been seen at
+- [examples/bench/basic](examples/bench/basic).
+- [examples/bench/description](examples/bench/description).
+- [examples/bench/template](examples/bench/template).
+
+Examples can be run under `examples` with
+- `mix bench.basic`
+- `mix bench.description`
+- `mix bench.template`

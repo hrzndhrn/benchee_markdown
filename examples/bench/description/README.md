@@ -1,8 +1,6 @@
 # Benchmark Example
 
-Custom template.
-
-Benchmark run from 2020-03-24 05:32:31.083995Z UTC
+This benchmark compares `foobar` with the libs `foo` and `bar`.
 
 ## System
 
@@ -64,19 +62,19 @@ Run Time
   </tr>
   <tr>
     <td style="white-space: nowrap">map.flatten</td>
-    <td style="white-space: nowrap; text-align: right">872.01</td>
-    <td style="white-space: nowrap; text-align: right">1.15 ms</td>
-    <td style="white-space: nowrap; text-align: right">±23.11%</td>
-    <td style="white-space: nowrap; text-align: right">1.14 ms</td>
-    <td style="white-space: nowrap; text-align: right">1.68 ms</td>
+    <td style="white-space: nowrap; text-align: right">947.78</td>
+    <td style="white-space: nowrap; text-align: right">1.06 ms</td>
+    <td style="white-space: nowrap; text-align: right">±23.59%</td>
+    <td style="white-space: nowrap; text-align: right">1.00 ms</td>
+    <td style="white-space: nowrap; text-align: right">1.60 ms</td>
   </tr>
   <tr>
     <td style="white-space: nowrap">flat_map</td>
-    <td style="white-space: nowrap; text-align: right">687.15</td>
-    <td style="white-space: nowrap; text-align: right">1.46 ms</td>
-    <td style="white-space: nowrap; text-align: right">±43.09%</td>
-    <td style="white-space: nowrap; text-align: right">1.66 ms</td>
-    <td style="white-space: nowrap; text-align: right">2.32 ms</td>
+    <td style="white-space: nowrap; text-align: right">698.25</td>
+    <td style="white-space: nowrap; text-align: right">1.43 ms</td>
+    <td style="white-space: nowrap; text-align: right">±38.56%</td>
+    <td style="white-space: nowrap; text-align: right">1.61 ms</td>
+    <td style="white-space: nowrap; text-align: right">2.14 ms</td>
   </tr>
 </table>
 Comparison
@@ -87,13 +85,13 @@ Comparison
     <th style="text-align: right">Slower</th>
   <tr>
     <td style="white-space: nowrap">map.flatten</td>
-    <td style="white-space: nowrap;text-align: right">872.01</td>
+    <td style="white-space: nowrap;text-align: right">947.78</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td style="white-space: nowrap">flat_map</td>
-    <td style="white-space: nowrap; text-align: right">687.15</td>
-    <td style="white-space: nowrap; text-align: right">1.27x</td>
+    <td style="white-space: nowrap; text-align: right">698.25</td>
+    <td style="white-space: nowrap; text-align: right">1.36x</td>
   </tr>
 </table>
 Memory Usage
@@ -130,17 +128,17 @@ Run Time
   </tr>
   <tr>
     <td style="white-space: nowrap">flat_map</td>
-    <td style="white-space: nowrap; text-align: right">1.41 M</td>
-    <td style="white-space: nowrap; text-align: right">707.33 ns</td>
-    <td style="white-space: nowrap; text-align: right">±199.97%</td>
+    <td style="white-space: nowrap; text-align: right">1.37 M</td>
+    <td style="white-space: nowrap; text-align: right">727.87 ns</td>
+    <td style="white-space: nowrap; text-align: right">±234.03%</td>
     <td style="white-space: nowrap; text-align: right">1000 ns</td>
-    <td style="white-space: nowrap; text-align: right">3000 ns</td>
+    <td style="white-space: nowrap; text-align: right">1000 ns</td>
   </tr>
   <tr>
     <td style="white-space: nowrap">map.flatten</td>
-    <td style="white-space: nowrap; text-align: right">1.06 M</td>
-    <td style="white-space: nowrap; text-align: right">944.20 ns</td>
-    <td style="white-space: nowrap; text-align: right">±160.58%</td>
+    <td style="white-space: nowrap; text-align: right">1.22 M</td>
+    <td style="white-space: nowrap; text-align: right">818.64 ns</td>
+    <td style="white-space: nowrap; text-align: right">±193.21%</td>
     <td style="white-space: nowrap; text-align: right">1000 ns</td>
     <td style="white-space: nowrap; text-align: right">2000 ns</td>
   </tr>
@@ -153,13 +151,13 @@ Comparison
     <th style="text-align: right">Slower</th>
   <tr>
     <td style="white-space: nowrap">flat_map</td>
-    <td style="white-space: nowrap;text-align: right">1.41 M</td>
+    <td style="white-space: nowrap;text-align: right">1.37 M</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td style="white-space: nowrap">map.flatten</td>
-    <td style="white-space: nowrap; text-align: right">1.06 M</td>
-    <td style="white-space: nowrap; text-align: right">1.33x</td>
+    <td style="white-space: nowrap; text-align: right">1.22 M</td>
+    <td style="white-space: nowrap; text-align: right">1.12x</td>
   </tr>
 </table>
 Memory Usage

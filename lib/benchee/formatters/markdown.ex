@@ -33,7 +33,7 @@ defmodule Benchee.Formatters.Markdown do
 
     opts
     |> Map.get(:template, :main)
-    |> Templates.render(suite: suite)
+    |> Templates.render(suite: suite, description: Map.get(opts, :description))
   end
 
   def format(_, _) do
