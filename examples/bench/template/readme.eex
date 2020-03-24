@@ -1,0 +1,25 @@
+<%
+  import Benchee.Formatter.Markdown.Helpers
+  import Benchee.Formatter.Markdown.Templates
+%>
+# <%= suite.configuration.title || "Benchmark" %>
+
+Custom template.
+
+Benchmark run from <%= DateTime.utc_now() |> DateTime.to_string() %> UTC
+
+## System
+
+Benchmark suite executing on the following system:
+
+<%= render(:system, [suite: suite]) %>
+
+## Configuration
+
+Benchmark suite executing with the following configuration:
+
+<%= render(:configuration, [suite: suite]) %>
+
+## Statistics
+
+<%= render(:statistics, [suite: suite]) %>
