@@ -30,6 +30,7 @@ defmodule Benchee.Formatters.Markdown do
   @impl true
   def format(suite, %{file: _} = opts) do
     Templates.start_link(opts)
+
     opts
     |> Map.get(:template, :main)
     |> Templates.render(suite: suite)
@@ -48,7 +49,5 @@ defmodule Benchee.Formatters.Markdown do
   to the file defined in the initial configuration.
   """
   @impl true
-  def write(data, %{file: file}) do
-    File.write!(file, data)
-  end
+  def write(data, %{file: file}), do: File.write!(file, data)
 end
