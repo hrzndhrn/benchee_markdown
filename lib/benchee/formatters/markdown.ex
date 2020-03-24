@@ -29,11 +29,9 @@ defmodule Benchee.Formatters.Markdown do
   """
   @impl true
   def format(suite, %{file: _} = opts) do
-    IO.inspect(opts)
     Templates.start_link(opts)
     opts
     |> Map.get(:template, :main)
-    |> IO.inspect(label: :template)
     |> Templates.render(suite: suite)
   end
 
@@ -51,7 +49,6 @@ defmodule Benchee.Formatters.Markdown do
   """
   @impl true
   def write(data, %{file: file}) do
-    IO.inspect(file, label: :write)
-    File.write!(file, data) |> IO.inspect
+    File.write!(file, data)
   end
 end
