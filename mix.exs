@@ -4,7 +4,7 @@ defmodule BencheeMarkdown.MixProject do
   def project do
     [
       app: :benchee_markdown,
-      version: "0.2.4",
+      version: "0.2.5",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
