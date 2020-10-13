@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.4 - 2020-10-13
+
+Add `:eex` to `:extra_applications`.
+
 ## 0.2.4 - 2020-03-24
 
 Add `:description` to the config.
