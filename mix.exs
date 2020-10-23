@@ -1,17 +1,19 @@
 defmodule BencheeMarkdown.MixProject do
   use Mix.Project
 
+  @source_url "https://github.com/hrzndhrn/benchee_markdown"
+  @version "0.2.5"
+
   def project do
     [
       app: :benchee_markdown,
-      version: "0.2.5",
+      version: @version,
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
-      description: """
-      Markdown formatter for the (micro) benchmarking library benchee.
-      """,
+      description: "Markdown formatter for the (micro) benchmarking library benchee.",
+      docs: docs(),
       dialyzer: [
         plt_add_apps: [:eex]
       ],
@@ -49,8 +51,20 @@ defmodule BencheeMarkdown.MixProject do
       maintainers: ["Marcus Kruse"],
       licenses: ["MIT"],
       links: %{
-        "github" => "https://github.com/hrzndhrn/benchee_markdown"
+        "Changelog" => "#{@source_url}/blob/master/CHANGELOG.md",
+        "GitHub" => @source_url
       }
+    ]
+  end
+
+  defp docs do
+    [
+      main: "readme",
+      source_ref: "v#{@version}",
+      source_url: @source_url,
+      extras: [
+        "README.md"
+      ]
     ]
   end
 end

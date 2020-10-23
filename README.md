@@ -1,5 +1,6 @@
 # BencheeMarkdown
 [![Hex.pm](https://img.shields.io/hexpm/v/benchee_markdown.svg)](https://hex.pm/packages/benchee_markdown)
+[![Hexdocs.pm](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/benchee_markdown/)
 [![Build Status](https://travis-ci.org/hrzndhrn/benchee_markdown.svg?branch=master)](https://travis-ci.org/hrzndhrn/benchee_markdown)
 [![Coverage Status](https://coveralls.io/repos/github/hrzndhrn/benchee_markdown/badge.svg?branch=master)](https://coveralls.io/github/hrzndhrn/benchee_markdown?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -8,7 +9,7 @@
 
 ## Installation
 
-Add benchee_markdown to your list of dependencies in `mix.exs`:
+Add `benchee_markdown` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -54,9 +55,9 @@ inserted.
 ## Examples
 
 Examples can been seen at
-- [examples/bench/basic](examples/bench/basic).
-- [examples/bench/description](examples/bench/description).
-- [examples/bench/template](examples/bench/template).
+- [examples/bench/basic](https://github.com/hrzndhrn/benchee_markdown/tree/master/examples/bench/basic).
+- [examples/bench/description](https://github.com/hrzndhrn/benchee_markdown/tree/master/examples/bench/description).
+- [examples/bench/template](https://github.com/hrzndhrn/benchee_markdown/tree/master/examples/bench/template).
 
 Examples can be run under `examples` with
 - `mix bench.basic`
