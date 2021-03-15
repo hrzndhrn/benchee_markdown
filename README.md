@@ -1,4 +1,5 @@
 # BencheeMarkdown
+
 [![Hex.pm](https://img.shields.io/hexpm/v/benchee_markdown.svg)](https://hex.pm/packages/benchee_markdown)
 [![Build Status](https://travis-ci.org/hrzndhrn/benchee_markdown.svg?branch=master)](https://travis-ci.org/hrzndhrn/benchee_markdown)
 [![Coverage Status](https://coveralls.io/repos/github/hrzndhrn/benchee_markdown/badge.svg?branch=master)](https://coveralls.io/github/hrzndhrn/benchee_markdown?branch=master)
@@ -35,7 +36,7 @@ Benchee.run(
   formatters: [
     Benchee.Formatters.Console,
     {Benchee.Formatters.Markdown,
-      file: "my.md"
+      file: "my.md",
       description: """
       This benchmark compares `foobar` with the libs `foo` and `bar`.
       """
