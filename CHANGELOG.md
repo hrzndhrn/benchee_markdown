@@ -1,6 +1,10 @@
 # Changelog
 
-## 0.2.4 - 2020-10-13
+## 0.2.6 - 2021-03-15
+
+Fix tempalte `memory_usages.eex`.
+
+## 0.2.5 - 2020-10-13
 
 Add `:eex` to `:extra_applications`.
 

@@ -2,7 +2,7 @@ defmodule BencheeMarkdown.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/hrzndhrn/benchee_markdown"
-  @version "0.2.5"
+  @version "0.2.6"
 
   def project do
     [
@@ -39,7 +39,7 @@ defmodule BencheeMarkdown.MixProject do
     [
       {:benchee, ">= 0.99.0 and < 2.0.0"},
       {:credo, "~> 1.0", only: [:dev, :test]},
-      {:dialyxir, "~> 1.0.0-rc.4", only: [:dev], runtime: false},
+      {:dialyxir, "~> 1.1", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.14", only: :dev},
       {:excoveralls, "~> 0.10", only: :test}
     ]
