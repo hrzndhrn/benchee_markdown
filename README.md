@@ -1,9 +1,9 @@
 # BencheeMarkdown
 
-[![Hex.pm](https://img.shields.io/hexpm/v/benchee_markdown.svg)](https://hex.pm/packages/benchee_markdown)
-[![Build Status](https://travis-ci.org/hrzndhrn/benchee_markdown.svg?branch=master)](https://travis-ci.org/hrzndhrn/benchee_markdown)
-[![Coverage Status](https://coveralls.io/repos/github/hrzndhrn/benchee_markdown/badge.svg?branch=master)](https://coveralls.io/github/hrzndhrn/benchee_markdown?branch=master)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Hex.pm: version](https://img.shields.io/hexpm/v/benchee_markdown.svg?style=flat-square)](https://hex.pm/packages/benchee_markdown)
+[![GitHub: CI status](https://img.shields.io/github/workflow/status/hrzndhrn/benchee_markdown/CI?style=flat-square)](https://github.com/hrzndhrn/benchee_markdown/actions)
+[![Coveralls: coverage](https://img.shields.io/coveralls/github/hrzndhrn/benchee_markdown?style=flat-square)](https://coveralls.io/github/hrzndhrn/benchee_markdown)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/hrzndhrn/benchee_markdown/blob/main/LICENSE.md)
 
 [Benchee](https://github.com/bencheeorg/benchee) formatter to output markdown. A very early beta version.
 
