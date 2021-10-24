@@ -14,10 +14,14 @@
     }
   } = scenario
 
-  slower = Float.round(more_run_time, 2)
+  slower = if more_run_time == :infinity do
+    "&mdash;"
+  else
+    "#{Float.round(more_run_time, 2)}x"
+  end
 %>
   <tr>
     <td style="white-space: nowrap"><%= name %></td>
     <td style="white-space: nowrap; text-align: right"><%= count_output(ips, units.ips) %></td>
-    <td style="white-space: nowrap; text-align: right"><%= slower %>x</td>
+    <td style="white-space: nowrap; text-align: right"><%= slower %></td>
   </tr>

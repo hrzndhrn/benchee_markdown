@@ -17,4 +17,3 @@ Comparison
 Memory Usage
 <%= render(:memory_usages, [suite: suite, input: input]) %>
 <% end %>
-<hr/>

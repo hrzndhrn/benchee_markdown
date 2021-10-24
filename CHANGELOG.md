@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.7 - 2021-10-24
+
+Fix for `:infinity` factors.
+
 ## 0.2.6 - 2021-03-15
 
 Fix tempalte `memory_usages.eex`.

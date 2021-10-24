@@ -14,10 +14,13 @@
     }
   } = scenario
 
-  factor = Float.round(more_memory, 2)
-%>
-  <tr>
+  factor = if more_memory == :infinity do
+    "&mdash;"
+  else
+    "#{Float.round(more_memory, 2)}x"
+  end
+%>    <tr>
     <td style="white-space: nowrap"><%= name %></td>
     <td style="white-space: nowrap"><%= memory_output(average, units.memory) %></td>
-    <td><%= factor %>x</td>
+    <td><%= factor %></td>
   </tr>

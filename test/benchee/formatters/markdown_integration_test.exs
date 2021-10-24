@@ -28,7 +28,7 @@ defmodule Benchee.Formatters.MarkdownIntegrationTest do
 
     assert File.exists?(@file_path)
   after
-    File.rm(@file_path)
+    # File.rm(@file_path)
   end
 
   test "works just fine with inputs" do
