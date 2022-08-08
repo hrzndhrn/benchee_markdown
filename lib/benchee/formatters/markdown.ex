@@ -29,11 +29,7 @@ defmodule Benchee.Formatters.Markdown do
   """
   @impl true
   def format(suite, %{file: _} = opts) do
-    Templates.start_link(opts)
-
-    opts
-    |> Map.get(:template, :main)
-    |> Templates.render(suite: suite, description: Map.get(opts, :description))
+    render(suite, opts)
   end
 
   def format(_, _) do
@@ -50,4 +46,24 @@ defmodule Benchee.Formatters.Markdown do
   """
   @impl true
   def write(data, %{file: file}), do: File.write!(file, data)
+
+  @doc """
+  Renders a given `%Benchee.Suite{}` as makrdown.
+  """
+  def render(suite, opts \\ %{})
+
+  def render(suite, opts) when is_list(opts) do
+    render(suite, Enum.into(opts, %{}))
+  end
+
+  def render(suite, opts) do
+    Templates.start_link(opts)
+
+    opts
+    |> Map.get(:template, :main)
+    |> Templates.render(suite: suite,
+      description: Map.get(opts, :description),
+      livebook: Map.get(opts, :livebook, false)
+    )
+  end
 end
