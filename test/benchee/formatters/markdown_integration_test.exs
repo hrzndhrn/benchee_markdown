@@ -75,22 +75,23 @@ defmodule Benchee.Formatters.MarkdownIntegrationTest do
     map_fun = fn i -> [i, i * i] end
 
     capture_io(fn ->
-      result = Benchee.run(
-        %{
-          "flat_map" => fn list -> Enum.flat_map(list, map_fun) end,
-          "map.flatten" => fn list ->
-            list |> Enum.map(map_fun) |> List.flatten()
-          end
-        },
-        inputs: inputs,
-        time: 0.01,
-        memory_time: 0.01,
-        warmup: 0.02,
-        print: [fast_warning: false],
-        formatters: [
-          Benchee.Formatters.Console
-        ]
-      )
+      result =
+        Benchee.run(
+          %{
+            "flat_map" => fn list -> Enum.flat_map(list, map_fun) end,
+            "map.flatten" => fn list ->
+              list |> Enum.map(map_fun) |> List.flatten()
+            end
+          },
+          inputs: inputs,
+          time: 0.01,
+          memory_time: 0.01,
+          warmup: 0.02,
+          print: [fast_warning: false],
+          formatters: [
+            Benchee.Formatters.Console
+          ]
+        )
 
       markdown = Benchee.Formatters.Markdown.render(result, title: :none)
       refute markdown =~ "# Benchmark"
@@ -107,22 +108,23 @@ defmodule Benchee.Formatters.MarkdownIntegrationTest do
     map_fun = fn i -> [i, i * i] end
 
     capture_io(fn ->
-      result = Benchee.run(
-        %{
-          "flat_map" => fn list -> Enum.flat_map(list, map_fun) end,
-          "map.flatten" => fn list ->
-            list |> Enum.map(map_fun) |> List.flatten()
-          end
-        },
-        inputs: inputs,
-        time: 0.01,
-        memory_time: 0.01,
-        warmup: 0.02,
-        print: [fast_warning: false],
-        formatters: [
-          Benchee.Formatters.Console
-        ]
-      )
+      result =
+        Benchee.run(
+          %{
+            "flat_map" => fn list -> Enum.flat_map(list, map_fun) end,
+            "map.flatten" => fn list ->
+              list |> Enum.map(map_fun) |> List.flatten()
+            end
+          },
+          inputs: inputs,
+          time: 0.01,
+          memory_time: 0.01,
+          warmup: 0.02,
+          print: [fast_warning: false],
+          formatters: [
+            Benchee.Formatters.Console
+          ]
+        )
 
       markdown = Benchee.Formatters.Markdown.render(result, livebook: true)
       assert String.starts_with?(markdown, "__Input:")
