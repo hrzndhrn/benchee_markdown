@@ -1,0 +1,6 @@
+<%
+  import Benchee.Formatter.Markdown.Helpers
+  import Benchee.Formatter.Markdown.Templates
+%><%=
+  render(:statistics, [suite: suite])
+%>

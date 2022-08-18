@@ -11,7 +11,7 @@
 
   %Scenario{
     name: name,
-    memory_usage_data: %{
+    reductions_data: %{
       statistics: %Statistics{
         average: average
       }
@@ -26,7 +26,7 @@
   </tr>
   <tr>
     <td style="white-space: nowrap"><%= name %></td>
-    <td style="white-space: nowrap"><%= memory_output(average, units.memory) %></td>
+    <td style="white-space: nowrap"><%= count_output(average, units.reduction_count) %></td>
     <%= if comparison?(suite) do %>    <td>&nbsp;</td><% end %>
   </tr>
   <%=
@@ -34,7 +34,7 @@
       scenarios,
       fn scenario ->
         render(
-          :memory_usage,
+          :reduction_count,
           [scenario: scenario, units: units]
         )
       end

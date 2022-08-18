@@ -8,7 +8,7 @@ defmodule BencheeMarkdown.MixProject do
     [
       app: :benchee_markdown,
       version: @version,
-      elixir: "~> 1.6",
+      elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
@@ -37,7 +37,7 @@ defmodule BencheeMarkdown.MixProject do
 
   defp deps do
     [
-      {:benchee, ">= 0.99.0 and < 2.0.0"},
+      {:benchee, ">= 1.1.0 and < 2.0.0"},
       {:credo, "~> 1.0", only: [:dev, :test]},
       {:dialyxir, "~> 1.1", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.14", only: :dev},
