@@ -60,10 +60,20 @@ defmodule Benchee.Formatters.Markdown do
     Templates.start_link(opts)
 
     opts
-    |> Map.get(:template, :main)
-    |> Templates.render(suite: suite,
-      description: Map.get(opts, :description),
-      livebook: Map.get(opts, :livebook, false)
+    |> Map.get(:template, template(opts))
+    |> Templates.render(
+      suite: suite,
+      description: Map.get(opts, :description)
     )
+    |> String.trim()
   end
+
+  defp template(opts) do
+    case livebook?(opts) do
+      true -> :livebook
+      false -> :main
+    end
+  end
+
+  defp livebook?(opts), do: Map.get(opts, :livebook, false)
 end

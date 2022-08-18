@@ -8,7 +8,10 @@ defmodule Benchee.Formatter.Markdown.Templates do
     comparisons
     configuration
     input
+    livebook
     main
+    reduction_count
+    reduction_counts
     scenario
     scenarios
     statistics

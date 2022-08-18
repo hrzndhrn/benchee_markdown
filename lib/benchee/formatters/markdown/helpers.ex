@@ -51,6 +51,8 @@ defmodule Benchee.Formatter.Markdown.Helpers do
 
   def memory_usage?(suite), do: suite.configuration.memory_time > 0
 
+  def reduction_count?(suite), do: suite.configuration.reduction_time > 0
+
   defp escape(string) do
     @html_entities |> Map.to_list() |> escape(string)
   end

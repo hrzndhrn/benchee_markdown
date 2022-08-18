@@ -1,0 +1,26 @@
+<%
+  import Benchee.Formatter.Markdown.Helpers
+
+  alias Benchee.Scenario
+  alias Benchee.Statistics
+
+  %Scenario{
+    name: name,
+    reductions_data: %{
+      statistics: %Statistics{
+        average: average,
+        relative_more: more
+      }
+    }
+  } = scenario
+
+  factor = if more == :infinity do
+    "&mdash;"
+  else
+    "#{Float.round(more, 2)}x"
+  end
+%>    <tr>
+    <td style="white-space: nowrap"><%= name %></td>
+    <td style="white-space: nowrap"><%= count_output(average, units.reduction_count) %></td>
+    <td><%= factor %></td>
+  </tr>

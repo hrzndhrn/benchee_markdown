@@ -1,20 +1,16 @@
 <%
   import Benchee.Formatter.Markdown.Helpers
   import Benchee.Formatter.Markdown.Templates
+%><%=
+  suite.configuration.title || "Benchmark"
 %>
-<%= unless livebook do %>
-# <%= suite.configuration.title || "Benchmark" %>
-<% end %>
 
 <%= if description != nil do %>
 <%= description %>
 <% else %>
-<%= unless livebook do %>
 Benchmark run from <%= DateTime.utc_now() |> DateTime.to_string() %> UTC
 <% end %>
-<% end %>
 
-<%= unless livebook do %>
 ## System
 
 Benchmark suite executing on the following system:
@@ -28,6 +24,5 @@ Benchmark suite executing with the following configuration:
 <%= render(:configuration, [suite: suite]) %>
 
 ## Statistics
-<% end %>
 
 <%= render(:statistics, [suite: suite]) %>

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 - 2022-08-17
+
+Add `Benchee.Formatters.Markdown.render/2`.
+
+Add an extra template for livebook.
+
+Add "Reduction Count".
+
 ## 0.2.7 - 2021-10-24
 
 Fix for `:infinity` factors.

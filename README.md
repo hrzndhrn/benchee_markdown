@@ -13,7 +13,7 @@ Add `benchee_markdown` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:benchee_markdown, "~> 0.2", only: :dev}]
+  [{:benchee_markdown, "~> 0.3", only: :dev}]
 end
 ```
 
