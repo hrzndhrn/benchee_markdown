@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.3.0 - 2022-08-17
+## 0.3.0 - 2022-08-18
 
 Add `Benchee.Formatters.Markdown.render/2`.
 
