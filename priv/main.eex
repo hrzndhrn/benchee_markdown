@@ -2,7 +2,7 @@
   import Benchee.Formatter.Markdown.Helpers
   import Benchee.Formatter.Markdown.Templates
 %><%=
-  suite.configuration.title || "Benchmark"
+  title || suite.configuration.title || "Benchmark"
 %>
 
 <%= if description != nil do %>

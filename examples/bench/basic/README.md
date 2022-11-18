@@ -1,6 +1,6 @@
-# Benchmark Example
+Benchmark Example
 
-Benchmark run from 2020-03-24 05:17:38.050909Z UTC
+Benchmark run from 2022-11-18 15:22:20.915093Z UTC
 
 ## System
 
@@ -12,7 +12,7 @@ Benchmark suite executing on the following system:
     <td>macOS</td>
   </tr><tr>
     <th style="white-space: nowrap">CPU Information</th>
-    <td style="white-space: nowrap">Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz</td>
+    <td style="white-space: nowrap">Apple M1</td>
   </tr><tr>
     <th style="white-space: nowrap">Number of Available Cores</th>
     <td style="white-space: nowrap">8</td>
@@ -21,10 +21,10 @@ Benchmark suite executing on the following system:
     <td style="white-space: nowrap">16 GB</td>
   </tr><tr>
     <th style="white-space: nowrap">Elixir Version</th>
-    <td style="white-space: nowrap">1.10.2</td>
+    <td style="white-space: nowrap">1.14.1</td>
   </tr><tr>
     <th style="white-space: nowrap">Erlang Version</th>
-    <td style="white-space: nowrap">22.3</td>
+    <td style="white-space: nowrap">25.1.2</td>
   </tr>
 </table>
 
@@ -48,9 +48,11 @@ Benchmark suite executing with the following configuration:
 ## Statistics
 
 
+
 __Input: long_list__
 
 Run Time
+
 <table style="width: 1%">
   <tr>
     <th>Name</th>
@@ -60,63 +62,77 @@ Run Time
     <th style="text-align: right">Median</th>
     <th style="text-align: right">99th&nbsp;%</th>
   </tr>
-  <tr>
-    <td style="white-space: nowrap">map.flatten</td>
-    <td style="white-space: nowrap; text-align: right">925.69</td>
-    <td style="white-space: nowrap; text-align: right">1.08 ms</td>
-    <td style="white-space: nowrap; text-align: right">±33.78%</td>
-    <td style="white-space: nowrap; text-align: right">1.00 ms</td>
-    <td style="white-space: nowrap; text-align: right">2.05 ms</td>
-  </tr>
+
   <tr>
     <td style="white-space: nowrap">flat_map</td>
-    <td style="white-space: nowrap; text-align: right">868.66</td>
-    <td style="white-space: nowrap; text-align: right">1.15 ms</td>
-    <td style="white-space: nowrap; text-align: right">±45.02%</td>
-    <td style="white-space: nowrap; text-align: right">1.27 ms</td>
-    <td style="white-space: nowrap; text-align: right">1.70 ms</td>
+    <td style="white-space: nowrap; text-align: right">2.59 K</td>
+    <td style="white-space: nowrap; text-align: right">386.13 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;81.99%</td>
+    <td style="white-space: nowrap; text-align: right">249.25 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">1294.67 &micro;s</td>
   </tr>
+
+  <tr>
+    <td style="white-space: nowrap">map.flatten</td>
+    <td style="white-space: nowrap; text-align: right">2.24 K</td>
+    <td style="white-space: nowrap; text-align: right">446.12 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;34.33%</td>
+    <td style="white-space: nowrap; text-align: right">389.54 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">900.29 &micro;s</td>
+  </tr>
+
 </table>
-Comparison
+
+
+Run Time Comparison
+
 <table style="width: 1%">
   <tr>
     <th>Name</th>
     <th style="text-align: right">IPS</th>
     <th style="text-align: right">Slower</th>
   <tr>
-    <td style="white-space: nowrap">map.flatten</td>
-    <td style="white-space: nowrap;text-align: right">925.69</td>
+    <td style="white-space: nowrap">flat_map</td>
+    <td style="white-space: nowrap;text-align: right">2.59 K</td>
     <td>&nbsp;</td>
   </tr>
+
   <tr>
-    <td style="white-space: nowrap">flat_map</td>
-    <td style="white-space: nowrap; text-align: right">868.66</td>
-    <td style="white-space: nowrap; text-align: right">1.07x</td>
+    <td style="white-space: nowrap">map.flatten</td>
+    <td style="white-space: nowrap; text-align: right">2.24 K</td>
+    <td style="white-space: nowrap; text-align: right">1.16x</td>
   </tr>
+
 </table>
+
+
+
 Memory Usage
+
 <table style="width: 1%">
   <tr>
     <th>Name</th>
-    <th style="text-align: right">Memory</th>
-      <th style="text-align: right">Factor</th>
-  </tr>
-  <tr>
-    <td style="white-space: nowrap">map.flatten</td>
-    <td style="white-space: nowrap">781.25 KB</td>
-      <td>&nbsp;</td>
+    <th style="text-align: right">Average</th>
+    <th style="text-align: right">Factor</th>
   </tr>
   <tr>
     <td style="white-space: nowrap">flat_map</td>
     <td style="white-space: nowrap">625 KB</td>
-    <td>0.8x</td>
+    <td>&nbsp;</td>
+  </tr>
+    <tr>
+    <td style="white-space: nowrap">map.flatten</td>
+    <td style="white-space: nowrap">781.25 KB</td>
+    <td>1.25x</td>
   </tr>
 </table>
-<hr/>
+
+
 
 __Input: short_list__
 
 Run Time
+
 <table style="width: 1%">
   <tr>
     <th>Name</th>
@@ -126,24 +142,30 @@ Run Time
     <th style="text-align: right">Median</th>
     <th style="text-align: right">99th&nbsp;%</th>
   </tr>
+
   <tr>
     <td style="white-space: nowrap">flat_map</td>
-    <td style="white-space: nowrap; text-align: right">1.46 M</td>
-    <td style="white-space: nowrap; text-align: right">685.01 ns</td>
-    <td style="white-space: nowrap; text-align: right">±92.43%</td>
-    <td style="white-space: nowrap; text-align: right">980 ns</td>
-    <td style="white-space: nowrap; text-align: right">2980 ns</td>
+    <td style="white-space: nowrap; text-align: right">7.94 M</td>
+    <td style="white-space: nowrap; text-align: right">126.01 ns</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;47.04%</td>
+    <td style="white-space: nowrap; text-align: right">120.90 ns</td>
+    <td style="white-space: nowrap; text-align: right">145.80 ns</td>
   </tr>
+
   <tr>
     <td style="white-space: nowrap">map.flatten</td>
-    <td style="white-space: nowrap; text-align: right">1.22 M</td>
-    <td style="white-space: nowrap; text-align: right">819.12 ns</td>
-    <td style="white-space: nowrap; text-align: right">±201.30%</td>
-    <td style="white-space: nowrap; text-align: right">980 ns</td>
-    <td style="white-space: nowrap; text-align: right">1980 ns</td>
+    <td style="white-space: nowrap; text-align: right">7.44 M</td>
+    <td style="white-space: nowrap; text-align: right">134.46 ns</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;43.20%</td>
+    <td style="white-space: nowrap; text-align: right">125 ns</td>
+    <td style="white-space: nowrap; text-align: right">187.50 ns</td>
   </tr>
+
 </table>
-Comparison
+
+
+Run Time Comparison
+
 <table style="width: 1%">
   <tr>
     <th>Name</th>
@@ -151,31 +173,36 @@ Comparison
     <th style="text-align: right">Slower</th>
   <tr>
     <td style="white-space: nowrap">flat_map</td>
-    <td style="white-space: nowrap;text-align: right">1.46 M</td>
+    <td style="white-space: nowrap;text-align: right">7.94 M</td>
     <td>&nbsp;</td>
   </tr>
+
   <tr>
     <td style="white-space: nowrap">map.flatten</td>
-    <td style="white-space: nowrap; text-align: right">1.22 M</td>
-    <td style="white-space: nowrap; text-align: right">1.2x</td>
+    <td style="white-space: nowrap; text-align: right">7.44 M</td>
+    <td style="white-space: nowrap; text-align: right">1.07x</td>
   </tr>
+
 </table>
+
+
+
 Memory Usage
+
 <table style="width: 1%">
   <tr>
     <th>Name</th>
-    <th style="text-align: right">Memory</th>
-      <th style="text-align: right">Factor</th>
+    <th style="text-align: right">Average</th>
+    <th style="text-align: right">Factor</th>
   </tr>
   <tr>
     <td style="white-space: nowrap">flat_map</td>
     <td style="white-space: nowrap">640 B</td>
-      <td>&nbsp;</td>
+    <td>&nbsp;</td>
   </tr>
-  <tr>
+    <tr>
     <td style="white-space: nowrap">map.flatten</td>
     <td style="white-space: nowrap">800 B</td>
     <td>1.25x</td>
   </tr>
 </table>
-<hr/>

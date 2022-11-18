@@ -63,7 +63,8 @@ defmodule Benchee.Formatters.Markdown do
     |> Map.get(:template, template(opts))
     |> Templates.render(
       suite: suite,
-      description: Map.get(opts, :description)
+      description: Map.get(opts, :description),
+      title: Map.get(opts, :title)
     )
     |> String.trim()
   end
