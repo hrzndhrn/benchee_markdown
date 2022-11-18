@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0 - 2022-11-18
+
+Get title form opts or suite.
+
 ## 0.3.0 - 2022-08-18
 
 Add `Benchee.Formatters.Markdown.render/2`.
