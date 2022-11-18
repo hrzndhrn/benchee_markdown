@@ -23,7 +23,7 @@ defmodule BencheeMarkdown.MixProject do
       preferred_cli_env: [
         coveralls: :test,
         "coveralls.detail": :test,
-        "coveralls.post": :test,
+        "coveralls.github": :test,
         "coveralls.html": :test
       ]
     ]
