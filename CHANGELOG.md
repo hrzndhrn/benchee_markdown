@@ -1,6 +1,10 @@
 # Changelog
 
-## 0.3.0 - 2022-11-18
+## 0.3.1 - 2022-11-18
+
+Create dirs for output files.
+
+## 0.3.1 - 2022-11-18
 
 Get title form opts or suite.
 
