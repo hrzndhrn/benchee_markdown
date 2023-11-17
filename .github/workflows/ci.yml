@@ -1,4 +1,4 @@
-# Created with GitHubActions version 0.2.11
+# Created with GitHubActions version 0.2.18
 name: CI
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -20,7 +20,7 @@ jobs:
           - '1.12.3'
           - '1.13.4'
           - '1.14.5'
-          - '1.15.0'
+          - '1.15.7'
         otp:
           - '20.3'
           - '21.3'
@@ -28,7 +28,7 @@ jobs:
           - '23.3'
           - '24.3'
           - '25.3'
-          - '26.0'
+          - '26.1'
         exclude:
           - elixir: '1.7.4'
             otp: '23.3'
@@ -37,7 +37,7 @@ jobs:
           - elixir: '1.7.4'
             otp: '25.3'
           - elixir: '1.7.4'
-            otp: '26.0'
+            otp: '26.1'
           - elixir: '1.8.2'
             otp: '23.3'
           - elixir: '1.8.2'
@@ -45,7 +45,7 @@ jobs:
           - elixir: '1.8.2'
             otp: '25.3'
           - elixir: '1.8.2'
-            otp: '26.0'
+            otp: '26.1'
           - elixir: '1.9.4'
             otp: '23.3'
           - elixir: '1.9.4'
@@ -53,7 +53,7 @@ jobs:
           - elixir: '1.9.4'
             otp: '25.3'
           - elixir: '1.9.4'
-            otp: '26.0'
+            otp: '26.1'
           - elixir: '1.10.4'
             otp: '20.3'
           - elixir: '1.10.4'
@@ -61,13 +61,13 @@ jobs:
           - elixir: '1.10.4'
             otp: '25.3'
           - elixir: '1.10.4'
-            otp: '26.0'
+            otp: '26.1'
           - elixir: '1.11.4'
             otp: '20.3'
           - elixir: '1.11.4'
             otp: '25.3'
           - elixir: '1.11.4'
-            otp: '26.0'
+            otp: '26.1'
           - elixir: '1.12.3'
             otp: '20.3'
           - elixir: '1.12.3'
@@ -75,28 +75,26 @@ jobs:
           - elixir: '1.12.3'
             otp: '25.3'
           - elixir: '1.12.3'
-            otp: '26.0'
+            otp: '26.1'
           - elixir: '1.13.4'
             otp: '20.3'
           - elixir: '1.13.4'
             otp: '21.3'
           - elixir: '1.13.4'
-            otp: '26.0'
+            otp: '26.1'
           - elixir: '1.14.5'
             otp: '20.3'
           - elixir: '1.14.5'
             otp: '21.3'
           - elixir: '1.14.5'
             otp: '22.3'
-          - elixir: '1.14.5'
-            otp: '26.0'
-          - elixir: '1.15.0'
+          - elixir: '1.15.7'
             otp: '20.3'
-          - elixir: '1.15.0'
+          - elixir: '1.15.7'
             otp: '21.3'
-          - elixir: '1.15.0'
+          - elixir: '1.15.7'
             otp: '22.3'
-          - elixir: '1.15.0'
+          - elixir: '1.15.7'
             otp: '23.3'
     steps:
       - name: Checkout
@@ -123,20 +121,20 @@ jobs:
       - name: Compile project
         run: MIX_ENV=test mix compile --warnings-as-errors
       - name: Check unused dependencies
-        if: ${{ contains(matrix.elixir, '1.15.0') && contains(matrix.otp, '26.0') }}
+        if: ${{ contains(matrix.elixir, '1.15.7') && contains(matrix.otp, '26.1') }}
         run: mix deps.unlock --check-unused
       - name: Check code format
-        if: ${{ contains(matrix.elixir, '1.15.0') && contains(matrix.otp, '26.0') }}
+        if: ${{ contains(matrix.elixir, '1.15.7') && contains(matrix.otp, '26.1') }}
         run: mix format --check-formatted
       - name: Lint code
-        if: ${{ contains(matrix.elixir, '1.15.0') && contains(matrix.otp, '26.0') }}
+        if: ${{ contains(matrix.elixir, '1.15.7') && contains(matrix.otp, '26.1') }}
         run: mix credo --strict
       - name: Run tests
         run: mix test
-        if: ${{ !(contains(matrix.elixir, '1.15.0') && contains(matrix.otp, '26.0')) }}
+        if: ${{ !(contains(matrix.elixir, '1.15.7') && contains(matrix.otp, '26.1')) }}
       - name: Run tests with coverage
         run: mix coveralls.github
-        if: ${{ contains(matrix.elixir, '1.15.0') && contains(matrix.otp, '26.0') }}
+        if: ${{ contains(matrix.elixir, '1.15.7') && contains(matrix.otp, '26.1') }}
       - name: Static code analysis
         run: mix dialyzer
-        if: ${{ contains(matrix.elixir, '1.15.0') && contains(matrix.otp, '26.0') }}
+        if: ${{ contains(matrix.elixir, '1.15.7') && contains(matrix.otp, '26.1') }}
