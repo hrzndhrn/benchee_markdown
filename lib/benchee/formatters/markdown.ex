@@ -45,7 +45,10 @@ defmodule Benchee.Formatters.Markdown do
   to the file defined in the initial configuration.
   """
   @impl true
-  def write(data, %{file: file}), do: File.write!(file, data)
+  def write(data, %{file: file}) do
+    File.mkdir_p!(Path.dirname(file))
+    File.write!(file, data)
+  end
 
   @doc """
   Renders a given `%Benchee.Suite{}` as makrdown.
