@@ -47,7 +47,7 @@ defmodule Benchee.Formatter.Markdown.Helpers do
     suite.configuration.inputs |> Enum.map(fn {name, _} -> name end)
   end
 
-  def inputs?(%{configuration: %{input_names: names}}), do: !Enum.empty?(names) |> IO.inspect()
+  def inputs?(%{configuration: %{input_names: names}}), do: !Enum.empty?(names)
 
   def inputs?(suite), do: is_list(suite.configuration.inputs)
 
