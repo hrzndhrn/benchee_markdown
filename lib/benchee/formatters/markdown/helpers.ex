@@ -49,7 +49,8 @@ defmodule Benchee.Formatter.Markdown.Helpers do
 
   # This definition uses `input_names` added in `benchee` 1.3.0.
   def inputs?(%{configuration: %{input_names: names}}), do: !Enum.empty?(names)
-  # This definition can be removed when we use `benchee` version 1.3.0 as minimum.
+  # This definition can be removed when we use `benchee` version 1.3.0 as
+  # minimum.
   def inputs?(suite), do: is_list(suite.configuration.inputs)
 
   def comparison?(suite), do: length(suite.scenarios) > 1
