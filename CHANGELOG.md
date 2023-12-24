@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.3.3 - 2023-12-17
+## 0.3.3 - 2023-12-24
 
 Changes for `benchee` 1.3.
 
