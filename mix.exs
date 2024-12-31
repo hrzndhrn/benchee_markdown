@@ -36,13 +36,21 @@ defmodule BencheeMarkdown.MixProject do
   end
 
   defp deps do
-    [
-      {:benchee, ">= 1.1.0 and < 2.0.0"},
-      {:credo, "~> 1.0", only: [:dev, :test]},
-      {:dialyxir, "~> 1.1", only: [:dev], runtime: false},
-      {:ex_doc, "~> 0.14", only: :dev},
-      {:excoveralls, "~> 0.10", only: :test}
+    deps = [
+      {:benchee, ">= 1.1.0 and < 2.0.0"}
     ]
+
+    if Version.match?(System.version(), "~> 1.14") do
+      deps ++
+        [
+          {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
+          {:dialyxir, "~> 1.1", only: [:dev], runtime: false},
+          {:ex_doc, "~> 0.14", only: :dev},
+          {:excoveralls, "~> 0.10", only: :test}
+        ]
+    else
+      deps
+    end
   end
 
   defp package do
