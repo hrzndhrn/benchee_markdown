@@ -44,7 +44,7 @@ defmodule Benchee.Formatter.Markdown.Helpers do
   def inputs(%{configuration: %{input_names: names}}), do: names
 
   def inputs(suite) do
-    suite.configuration.inputs |> Enum.map(fn {name, _} -> name end)
+    Enum.map(suite.configuration.inputs, fn {name, _} -> name end)
   end
 
   # This definition uses `input_names` added in `benchee` 1.3.0.

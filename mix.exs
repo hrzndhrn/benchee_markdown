@@ -51,7 +51,8 @@ defmodule BencheeMarkdown.MixProject do
           {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
           {:dialyxir, "~> 1.1", only: [:dev], runtime: false},
           {:ex_doc, "~> 0.14", only: :dev},
-          {:excoveralls, "~> 0.10", only: :test}
+          {:excoveralls, "~> 0.10", only: :test},
+          {:recode, "~> 0.8", only: :dev}
         ]
     else
       deps

@@ -53,6 +53,7 @@ defmodule Benchee.Formatters.Markdown do
   @doc """
   Renders a given `%Benchee.Suite{}` as makrdown.
   """
+  @spec render(Benchee.Suite.t(), map()) :: String.t()
   def render(suite, opts \\ %{})
 
   def render(suite, opts) when is_list(opts) do
