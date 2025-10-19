@@ -1,6 +1,9 @@
-defmodule Benchee.Formatters.MarkdownIntegrationTest do
+defmodule Formatters.MarkdownIntegrationTest do
   use ExUnit.Case
+
   import ExUnit.CaptureIO
+
+  alias Benchee.Formatters
 
   @file_path "test.md"
 
@@ -21,8 +24,8 @@ defmodule Benchee.Formatters.MarkdownIntegrationTest do
         print: [fast_warning: false],
         title: "My Benchmark",
         formatters: [
-          {Benchee.Formatters.Markdown, file: @file_path},
-          Benchee.Formatters.Console
+          {Formatters.Markdown, file: @file_path},
+          Formatters.Console
         ]
       )
     end)
@@ -55,8 +58,8 @@ defmodule Benchee.Formatters.MarkdownIntegrationTest do
         warmup: 0.02,
         print: [fast_warning: false],
         formatters: [
-          {Benchee.Formatters.Markdown, file: @file_path},
-          Benchee.Formatters.Console
+          {Formatters.Markdown, file: @file_path},
+          Formatters.Console
         ]
       )
     end)
@@ -89,11 +92,11 @@ defmodule Benchee.Formatters.MarkdownIntegrationTest do
           warmup: 0.02,
           print: [fast_warning: false],
           formatters: [
-            Benchee.Formatters.Console
+            Formatters.Console
           ]
         )
 
-      markdown = Benchee.Formatters.Markdown.render(result, title: :none)
+      markdown = Formatters.Markdown.render(result, title: :none)
       refute markdown =~ "# Benchmark"
       assert markdown =~ "Benchmark run"
     end)
@@ -122,11 +125,11 @@ defmodule Benchee.Formatters.MarkdownIntegrationTest do
           warmup: 0.02,
           print: [fast_warning: false],
           formatters: [
-            Benchee.Formatters.Console
+            Formatters.Console
           ]
         )
 
-      markdown = Benchee.Formatters.Markdown.render(result, livebook: true)
+      markdown = Formatters.Markdown.render(result, livebook: true)
       assert String.starts_with?(markdown, "__Input:")
     end)
   end
