@@ -26,7 +26,7 @@ Fix for `:infinity` factors.
 
 ## 0.2.6 - 2021-03-15
 
-Fix tempalte `memory_usages.eex`.
+Fix template `memory_usages.eex`.
 
 ## 0.2.5 - 2020-10-13
 
