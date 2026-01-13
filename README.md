@@ -1,7 +1,7 @@
 # BencheeMarkdown
 
 [![Hex.pm: version](https://img.shields.io/hexpm/v/benchee_markdown.svg?style=flat-square)](https://hex.pm/packages/benchee_markdown)
-[![GitHub: CI status](https://img.shields.io/github/actions/workflow/status/hrzndhrn/benchee_markdown/ci.yml?branch=master&style=flat-square)](https://github.com/hrzndhrn/benchee_markdown/actions)
+[![GitHub: CI status](https://img.shields.io/github/actions/workflow/status/hrzndhrn/benchee_markdown/ci.yml?branch=main&style=flat-square)](https://github.com/hrzndhrn/benchee_markdown/actions)
 [![Coveralls: coverage](https://img.shields.io/coveralls/github/hrzndhrn/benchee_markdown?style=flat-square)](https://coveralls.io/github/hrzndhrn/benchee_markdown)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/hrzndhrn/benchee_markdown/blob/main/LICENSE.md)
 
