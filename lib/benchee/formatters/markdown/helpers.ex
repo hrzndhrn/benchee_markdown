@@ -15,8 +15,8 @@ defmodule Benchee.Formatter.Markdown.Helpers do
     count |> Console.Helpers.count_output(unit) |> escape()
   end
 
-  def deviation_output(devitation) do
-    devitation |> Console.Helpers.deviation_output() |> escape()
+  def deviation_output(deviation) do
+    deviation |> Console.Helpers.deviation_output() |> escape()
   end
 
   def duration_output(duration, unit) do
