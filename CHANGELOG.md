@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.4 - 2026-06-12
+
+Fix typo.
+
 ## 0.3.3 - 2023-12-24
 
 Changes for `benchee` 1.3.
